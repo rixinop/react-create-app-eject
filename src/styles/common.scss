@@ -1,0 +1,154 @@
+$dw: 750;
+
+@function pxtorem($px) {
+    @return ($px / $dw) * 10 + rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+}
+
+input,
+select {
+    background: none;
+    outline: none;
+    border: 0px;
+    color: #cccccc;
+}
+
+textarea {
+    background: none;
+    outline: none;
+    border: 0px;
+}
+
+/*消息弹窗*/
+.m-message-mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 999;
+}
+
+.m-message-content {
+    position: fixed;
+    left: 50%;
+    padding: 0.42667rem 0.53333rem;
+    border-radius: 0.13333rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    font-size: pxtorem(28);
+    text-align: center;
+    letter-spacing: 0;
+    -webkit-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    z-index: 1500;
+    bottom: 0;
+    margin-bottom: pxtorem(68);
+}
+
+// head头部
+
+.m-head {
+    width: pxtorem(750);
+    height: pxtorem(88);
+    line-height: pxtorem(88);
+    text-align: center;
+    font-size: pxtorem(34);
+    background-color: #3bacf7;
+    color: #333333;
+    border-bottom: #c9c8cc solid 1px;
+    position: fixed;
+    top: 0;
+    // left: 0;
+    z-index: 10;
+    .head-l {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: pxtorem(150);
+        height: pxtorem(88);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-left: pxtorem(20);
+        img {
+            width: pxtorem(45);
+            height: pxtorem(45);
+        }
+    }
+    .head-m {
+        position: absolute;
+        left: pxtorem(150);
+        top: 0;
+        width: pxtorem(450);
+        height: pxtorem(88);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .head-r {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: pxtorem(150);
+        height: pxtorem(88);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: pxtorem(20);
+        img {
+            width: pxtorem(45);
+            height: pxtorem(45);
+        }
+    }
+}
+
+//头部留空的body
+.h-body {
+    width: pxtorem(750);
+    padding-top: pxtorem(88);
+    background-color: #fff;
+    font-size: pxtorem(28);
+    color: #414141;
+}
+
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(150, 150, 150, 0.2);
+    // position:absolute;
+    // top: 15%;right: 15%;left: 15%;bottom: 15%;
+    // background:hsla(0,0%,100%,.3);
+    .loading-main {
+        width: pxtorem(250);
+        height: pxtorem(200);
+        border: pxtorem(1) solid #c9c8cc;
+        border-radius: pxtorem(20);
+        background-color: rgba(0, 0, 0, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        img {
+            width: pxtorem(100);
+            height: pxtorem(100);
+        }
+        span {
+            // margin: pxtorem(20);
+            font-size: pxtorem(28);
+            color: #414141;
+        }
+    }
+}
